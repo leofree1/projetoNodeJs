@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        body {
+          font-size: 20px;
+        }
+  
+        h1 {
+          font-size: 35px;
+          text-transform: capitalize;
+          margin-top: 70px;
+        }
+  
+        h2 {
+          font-size: 15px;
+          font-weight: bold;
+          text-transform: capitalize;
+        }
+  
+        .container {
+          padding: 20px 200px;
+        }
+  
+        .info {
+          border: 1px solid #ccc;
+          padding: 10px 20px 5px 10px;
+          border-radius: 10px;
+          text-transform: capitalize;
+        }
+  
+        .info-text {
+          font-size: 25px;
+          color: #1d1c1c;
+          margin-bottom: 5px;
+        }
+      </style>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/logo.png" alt="" width="40" height="40">
+            </a>
+          <a class="navbar-brand text-light" href="/home">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/cadastro">Cadastro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/comentario">Comentários</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light">Usuário logado: <%= usuario %></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <center><h1>Seja bem vindo a rede social Live!</h1></center>
+      <center><img src="/logo.png" alt="" width="500" height="500"></center>
+      <center><p class="info-text">Para publicar, e ler os comentários de outros usuários, cadastre-se, <br />ou logue utilizando nome e email já cadastrados.</p></center>
+
+    <center><a href="/cadastro"><input type="button" class="btn btn-primary" value="Clique aqui para iniciar" id=”botao-cadastro”></a><p></p></center>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
