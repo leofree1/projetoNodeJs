@@ -95,7 +95,7 @@ app.post("/cadastrarComentario", (req, res) => {
             res.render("../views/paginaComentarios", { dadosComentarios: listaComentarios, dadosUsuario: controleCadastro, usuario: controleUsuario })
         })
     }).catch(err => {
-        res.render("../views/comentarioErro", { erro: err.response.data }, { usuario: controleUsuario });
+        res.render("../views/comentarioErro", { erro: err.response.data, usuario: controleUsuario});
     })
 
 });
