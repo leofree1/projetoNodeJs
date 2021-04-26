@@ -37,8 +37,13 @@
       word-break: break-all;
     }
 
-    img {
+    .userIcon{
       width: 100%;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
     }
 
     .container {
@@ -71,7 +76,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="/logo.png" alt="" width="40" height="40">
+          <img src="/logo.png">
         </a>
         <a class="navbar-brand text-light" href="/home">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -88,6 +93,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link text-light">Usuário logado: <%= usuario %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/deslogar">Deslogar</a>
             </li>
           </ul>
         </div>
@@ -115,7 +123,7 @@
           <%for(comentario of dadosComentarios){ %>
             <div class="row">
               <div class="col-sm-1 mb-3">
-                <img src="/user.png">
+                <img class="userIcon" src="/user.png">
               </div>
               <div class="col-sm-11 mb-3">
                 <h2>Usuário: <%= comentario.nome %>

@@ -19,6 +19,12 @@ app.get("/cadastro", (req,res) => {
     res.render("../views/cadastro", {usuario: controleUsuario});
 });
 
+app.get("/deslogar", (req,res) => {
+    controleUsuario = "";
+    controleCadastro = {};
+    res.render("../views/home", {usuario: controleUsuario});
+});
+
 app.get("/comentario", (req,res) => {
     if(!controleCadastro.id) res.render("../views/verificarCadastro", {usuario: controleUsuario});
     else{
@@ -96,5 +102,5 @@ app.post("/cadastrarComentario", (req,res) => {
 });
 
 app.listen(3000, () => {
-    console.log("SERVIDOR RODANDO")
+    console.log("Servidor rodando em localhost:3000/home")
 });
